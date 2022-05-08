@@ -29,7 +29,7 @@ int main()
 
 	//array of objects
 	Complex *ptr1 = new Complex[4];
-	ptr1->setData(1,2);
+	ptr1->setData(1, 2);
 	ptr1->getData();
 
 	return 0;
