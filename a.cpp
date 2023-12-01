@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Shop{
-int id,price;
+class Shop {
+	int id, price;
 public:
 	void getData()
 	{
@@ -17,16 +17,15 @@ public:
 
 int main()
 {
-	int size=2;
-	//basically this is the syntax to allocate multiple objects
+	int size = 2;
+	//basically this is the syntax to allocate multiple objects Shop *ptr=new Shop[13]
 	//or arrays. *ptr points to the address of first object
-	Shop *ptr=new Shop[size];
-	int x,y;
-	for (int i = 0; i < size; ++i)
+	Shop *ptr = new Shop[size];
+	for (int i = 0; i < size; i++)
 	{
-		cout<<"Enter the id and price"<<endl;
-		cin>>x>>y;
-		ptr->setData(x,y);
+		cout << "enter the id and the price" << endl;
+		int x, y; cin >> x >> y;
+		ptr->setData(x, y);
 		ptr->getData();
 		ptr++;
 	}

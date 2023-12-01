@@ -52,3 +52,13 @@ int main()
 // 4. A virtual fn in base class may not be used;
 // 5. If a virtual fn is defined in a base class,
 // there is no necessity of redifining it in the derived class virtual_fn_ex
+
+
+
+// class whatsApp:public Notification{
+//     public:
+//     whatsApp(string s):Notification(s){};  -- sometimes it might be required to go like this
+//     void showNotification(void) override{
+//         cout<<"This is whatsApp Notification"<<endl;
+//     }
+// };

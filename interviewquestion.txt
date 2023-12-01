@@ -1,0 +1,82 @@
+// diff bw struct,union and enum
+
+Struct (Structure):
+	A struct is a composite data type that allows you to group different data types under a single name.
+	It is used to define a custom data type with multiple members (also known as fields or variables).
+	Each member within the struct has its own data type, and the memory for each member is allocated separately.
+		All members are accessible independently by their names.
+		Structs are useful for representing records, objects, or complex data structures.
+			Example in C :
+
+			c
+			Copy code
+			struct Person {
+			char name[50];
+				int age;
+				float height;
+			};
+Union (Union) :
+	A union is a special data type that allows you to store different data types in the same memory location.
+		Unlike structs, a union can hold only one value at a time, but the memory size is determined by the largest member.
+			When a new value is assigned to a union, it overwrites the previous value.
+			Unions are primarily used to save memory when you need to represent data in multiple formats.
+Example in C :
+
+			c
+			Copy code
+			union Data {
+				    int intValue;
+				    float floatValue;
+				    char stringValue[20];
+				};
+	Enum (Enumeration) :
+	An enum is a user - defined data type used to assign names to integral constants, making the code more readable and maintainable.
+	Enumerations create symbolic names (enum constants) that correspond to specific integer values.
+The default underlying data type for an enum is int, but you can specify a different integral type if needed.
+			Enum constants are implicitly assigned sequential integer values starting from 0 unless explicitly specified.
+
+#include <stdio.h>
+
+
+			enum WeekDays {
+		Monday,
+		Tuesday,
+		Wednesday,
+		Thursday,
+		Friday,
+		Saturday,
+		Sunday
+	};
+
+int main() {
+	enum WeekDays today = Wednesday;
+
+	switch (today) {
+	case Monday:
+		printf("Today is Monday.\n");
+		break;
+	case Tuesday:
+		printf("Today is Tuesday.\n");
+		break;
+	case Wednesday:
+		printf("Today is Wednesday.\n");
+		break;
+	case Thursday:
+		printf("Today is Thursday.\n");
+		break;
+	case Friday:
+		printf("Today is Friday.\n");
+		break;
+	case Saturday:
+		printf("Today is Saturday.\n");
+		break;
+	case Sunday:
+		printf("Today is Sunday.\n");
+		break;
+	default:
+		printf("Invalid day.\n");
+		break;
+	}
+
+	return 0;
+}

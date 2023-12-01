@@ -5,7 +5,7 @@ using namespace std;
 
 case1:
 class B:public A{
-	order of execution of constructor->first A() then B() 
+	order of execution of constructor->first A() then B()
 }
 
 case 2:
@@ -20,57 +20,57 @@ class A:public B,virtual public C{
 
 */
 
-class Base1{
+class Base1 {
 	int data1;
 public:
 	Base1(int i)
 	{
-		data1=i;
-		cout<<"Base class1 constructor called"<<endl;
+		data1 = i;
+		cout << "Base class1 constructor called" << endl;
 	}
 	void printData(void)
 	{
-		cout<<"The value of data for Base is "<<data1<<endl;
+		cout << "The value of data for Base is " << data1 << endl;
 	}
 };
 
-class Base2{
+class Base2 {
 	int data2;
 public:
 	Base2(int i)
 	{
-		data2=i;
-		cout<<"Base class2 constructor called"<<endl;
+		data2 = i;
+		cout << "Base class2 constructor called" << endl;
 	}
 	void printData(void)
 	{
-		cout<<"The value of data for Base is "<<data2<<endl;
+		cout << "The value of data for Base is " << data2 << endl;
 	}
 };
 
-class Derived:public Base1,public Base2
+class Derived: public Base1, public Base2
 {
 	int data3;
 public:
-	Derived(int a,int b,int c):Base2(a),Base1(b)//this does not affect calling
+	Derived(int a, int b, int c): Base2(a), Base1(b) //this does not affect calling
 	{
-		data3=c;
-		cout<<"Derived class constructor called"<<endl;
+		data3 = c;
+		cout << "Derived class constructor called" << endl;
 	}
 	void printData(void)
 	{
-		cout<<"The value of data for Derived is "<<data3<<endl;
+		cout << "The value of data for Derived is " << data3 << endl;
 	}
 
 };
 
 int main()
 {
-    Derived d1(1,2,3);
-    d1.printData();
+	Derived d1(1, 2, 3);
+	d1.printData();
 	return 0;
 }
 
 
-//qn1: if same fn is inherited from two diff base classes,then how 
+//qn1: if same fn is inherited from two diff base classes,then how
 //the derived class will understand whose fn it is.

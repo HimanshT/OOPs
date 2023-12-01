@@ -21,12 +21,25 @@ class Test{
 }
 }
 
-ex: 
+ex:
 
 */
 
 int main()
 {
-    
+
 	return 0;
 }
+
+
+class MyClass {
+private:
+	int num;
+	float value;
+
+public:
+	// Constructor with initialization list
+	MyClass(int n, float v) : num(n), value(v) {
+		// Constructor body (if any)
+	}
+};

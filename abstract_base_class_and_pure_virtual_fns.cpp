@@ -18,9 +18,9 @@ class Video: public Tutorial
 {
 	int videoLength;
 public:
-	Video(string s, float r, int l): Tutorial(s, r)
+	Video(string s, float r, int i): Tutorial(s, r)
 	{
-		videoLength = l;
+		videoLength = i;
 	}
 	void display()
 	{
@@ -37,16 +37,16 @@ int main()
 
 	//
 	Video v1(title, rating, videoLength);
-	//v1.display();
-	Tutorial *tut1;
-	tut1 = &v1;
-	tut1->display();
+	v1.display();
+	// Tutorial *tut1;
+	// tut1 = &v1;
+	// tut1->display();
 	return 0;
 }
 
 
 // Rules for virtual function
-// 1. They cannot be startic
+// 1. They cannot be static
 // 2. They are accessed by object pointers
 // 3. virtual fn can be a friend of another class virtual_fn_ex
 // 4. A virtual fn in base class may not be used;

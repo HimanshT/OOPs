@@ -1,0 +1,52 @@
+In C++, an interface is a class that only contains pure virtual functions (abstract methods) and no data members or concrete implementations. It serves as a contract or a blueprint for classes that inherit from it, specifying the methods that these derived classes must implement. An interface defines what a class should do without defining how it should do it.
+
+                C++ doesn't have a dedicated keyword like other programming languages (e.g., Java or C#) to declare an interface. Instead, an interface is typically achieved using an abstract class with pure virtual functions.
+
+                Here's a simple example of an interface in C++:
+
+                ```cpp
+#include <iostream>
+
+// The interface (abstract class)
+                class Shape {
+                public:
+                    // Pure virtual function (abstract method)
+                    virtual void draw() const = 0;
+
+                        // Virtual destructor (important when working with polymorphism)
+                        virtual ~Shape() {}
+                    };
+
+// Concrete class implementing the Shape interface
+class Circle : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Drawing a circle." << std::endl;
+    }
+};
+
+// Concrete class implementing the Shape interface
+class Square : public Shape {
+public:
+    void draw() const override {
+        std::cout << "Drawing a square." << std::endl;
+    }
+};
+
+int main() {
+    // Creating objects of concrete classes
+    Circle circle;
+    Square square;
+
+    // Using the Shape interface to draw different shapes
+    Shape* shape1 = &circle;
+    Shape* shape2 = &square;
+
+    shape1->draw(); // Output: Drawing a circle.
+    shape2->draw(); // Output: Drawing a square.
+
+    return 0;
+}
+```
+
+In this example, we define an interface `Shape` with a pure virtual function `draw()`. The `Circle` and `Square` classes inherit from the `Shape` interface and implement the `draw()` method according to their specific shapes. In the `main()` function, we demonstrate polymorphism by using pointers of the `Shape` interface to draw different shapes without knowing the specific implementations. This shows how we can achieve an interface - like behavior in C++.

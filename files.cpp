@@ -16,7 +16,7 @@ int main()
 {
 	string st = "this is a test file";
 	//opening file using constructor and writing in it
-	// ofstream out("sample1.txt");
+	// ofstream out ("sample1.txt");
 	// out << st;
 	//out.close() -->it is not necc. to use out you can use any name of your choice
 

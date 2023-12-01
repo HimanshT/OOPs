@@ -33,6 +33,6 @@ int main()
 {
 	// vector<int> v1(5);
 	// v1.showData();
-	display(5);
+	display(5.0);
 	return 0;
 }

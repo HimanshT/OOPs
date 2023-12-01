@@ -2,8 +2,8 @@
 using namespace std;
 typedef long long ll;
 
-class Complex{
-	int a,b;
+class Complex {
+	int a, b;
 public:
 	//creating constructor
 	//constructor is a special member function with the same name as of the
@@ -12,19 +12,19 @@ public:
 	Complex(void);//constructor declaration
 	void printData()
 	{
-		cout<<a<<" "<<b;
+		cout << a << " " << b;
 	}
 };
 
 Complex::Complex(void)//-default constructor
 {
-	a=10;b=30;
+	a = 10; b = 30;
 }
 
 int main()
 {
-    Complex c1;
-    c1.printData();
+	Complex c1;
+	c1.printData();
 	return 0;
 }
 
